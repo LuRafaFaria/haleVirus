@@ -4,7 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
+  - Clone
+  - Fire
+  - Ice
+  - Eletric
+  - StaticWall
+  - Water
+  - FrostedWater
+  - Door
+  - Button
+  - Gordura
+  - GoThroughFat
+  - Wall
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -12,12 +24,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - LayerWater
+  - Fat
   - Background
   - Player
-  - 
-  - 
+  - GoThroughFat
+  - Fire
   - 
   - 
   - 

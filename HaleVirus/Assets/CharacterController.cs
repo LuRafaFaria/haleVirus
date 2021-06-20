@@ -49,36 +49,24 @@ public class CharacterController : MonoBehaviour
 
     public void Move(float move, bool jump)
     {
-        if (inGround)
-        {   //
-            //Vector3 tVel = new Vector2(move * 10f, rigidbody2D.velocity.y);
-            //rigidbody2D.velocity = Vector3.SmoothDamp(rigidbody2D.velocity, tVel, ref vel, 0.05f);
-            //
-            //if (move > 0 && right == false)
-            //{
-            //    Flip();
-            //}
-            //else if (move < 0 && right)
-            //{
-            //    Flip();
-            //}
 
-
-        }
         Vector3 tVel = new Vector2(move * 10f, rigidbody2D.velocity.y);
         rigidbody2D.velocity = Vector3.SmoothDamp(rigidbody2D.velocity, tVel, ref vel, 0.05f);
 
         if (move > 0 && right == false)
         {
-            Flip();
+            //Flip();
         }
         else if (move < 0 && right)
         {
-            Flip();
+            //Flip();
         }
+
+
 
         if (inGround && jump)
         {
+            
             inGround = false;
             rigidbody2D.AddForce(new Vector2(0f, jumpforce));
         }
@@ -88,8 +76,10 @@ public class CharacterController : MonoBehaviour
     {
         right = !right;
 
-        Vector3 scale = transform.localScale;
-        scale.x = scale.x * -1;
-        transform.localScale = scale;
+        //Vector3 scale = transform.localScale;
+        //scale.x = scale.x * -1;
+        //transform.localScale = scale;
+
+        transform.Rotate(0f, 180f, 0f);
     }
 }
